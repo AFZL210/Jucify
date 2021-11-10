@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+body{
+    background: rgb(241, 229, 229);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+}
+
+nav ul li{
+    padding: 0 12px;
+}
+
+.brand img{
+    width: 44px;
+    padding: 0 8px;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.container{
+    min-height: 72vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    margin: 0px auto;
+    width: 100%;
+    background-image: url(images/back.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    height: 130px;
+    background-color: black;
+    bottom: 0;
+    flex-direction: column;
+    color: white;
+    padding: 12px;
+}
+
+.topText{
+    margin-left: 20px;
+}
+
+#progressBar{
+    width: 80vw;
+    text-align: center;
+    cursor: pointer;
+}
+
+.icons{
+    margin-top: 14px;
+}
+
+.icons i{
+    cursor: pointer;
+}
+
+.songItem{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 70%;
+    color: black;
+    margin: 12px 0px;
+    margin-left: 20px;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.songItem img{
+    width: 40px;
+    margin-left: 15px;
+}
+
+.songDurationText{
+    margin-right: 25px;
+}
+.playButtonSize{
+    margin-right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.songInfo{
+    position: absolute;
+    left: 10vw;
+}
+
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
