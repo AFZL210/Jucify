@@ -115,3 +115,35 @@ nav ul li{
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
+
+@media only screen and ( max-width: 768px ) {
+    .topText{
+        font-size: 20px;
+        padding-top: 6px;
+    }
+
+    .songName{
+        font-size: 15px;
+    }
+
+    .songItemContainer{
+        padding-top: 6px;
+        width: fit-content;
+    }
+
+    .songItem{
+        width: 500px;
+    }
+
+    #progressBar{
+        position: relative;
+        bottom: 20px;
+    }
+
+    .songInfo{
+        position: relative;
+        bottom: 80px;
+        left: -130px;
+    }
+
+}
