@@ -119,31 +119,26 @@ nav ul li{
 @media only screen and ( max-width: 768px ) {
     .topText{
         font-size: 20px;
-        padding-top: 6px;
-    }
-
-    .songName{
-        font-size: 15px;
+        margin-top: 8px;
     }
 
     .songItemContainer{
-        padding-top: 6px;
-        width: fit-content;
+        margin-top: 10px;
     }
 
     .songItem{
-        width: 500px;
-    }
-
-    #progressBar{
-        position: relative;
-        bottom: 20px;
+        width: 90%;
     }
 
     .songInfo{
         position: relative;
-        bottom: 80px;
-        left: -130px;
+        bottom: 64px;
+        left: -34px;
+    }
+
+    .icons{
+        position: relative;
+        top: 15px;
     }
 
 }

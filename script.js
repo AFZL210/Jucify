@@ -2,11 +2,11 @@ console.log("WELCOME TO JUCIFY");
 
 // INITIAISE THE VARIABLES
 let songIndex = 0;
-let audioElement = new Audio("songs/1.mp3");
-let masterPlay = document.getElementById("masterPlay");
-let myProgressBar = document.getElementById("progressBar");
-let gif = document.getElementById("gif");
-let masterSongName = document.getElementById('masterSongName')
+let audioElement = new Audio("songs/1.mp3");  // STORE AUDIO FILE
+let masterPlay = document.getElementById("masterPlay"); // MAIN PLAY BUTTON
+let myProgressBar = document.getElementById("progressBar");  // PROGRESS BAR
+let gif = document.getElementById("gif");  // PLAYING GIF ANIMATION
+let masterSongName = document.getElementById('masterSongName');  // DISPLAY CURRENT PLAYING SONG NAME
 let progress;
 
 
@@ -14,12 +14,13 @@ let progress;
 let songItem = Array.from(document.getElementsByClassName("songItem"));
 
 
+// Store Song Info in array of objects
 let songs = [
-    {songName: "All Girls Are The Same", filePath: "songs/1.mp3", coverPath: "covers/cover1.jpg"},
-    {songName: "Walk This Way", filePath: "songs/2.mp3", coverPath: "covers/cover1.jpg"},
-    {songName: "Space Travelling", filePath: "songs/3.mp3", coverPath: "covers/cover2.jpg"},
-    {songName: "Confide", filePath: "songs/4.mp3", coverPath: "covers/cover1.jpg"},
-    {songName: "NCS SONG", filePath: "songs/1.mp3", coverPath: "covers/cover1.jpg"}
+    {songName: "All Girls Are The Same", filePath: "songs/1.mp3", coverPath: "covers/cover1.jpg",songDurationText: "2:50"},
+    {songName: "Walk This Way", filePath: "songs/2.mp3", coverPath: "covers/cover1.jpg",songDurationText: "2:38"},
+    {songName: "Space Travelling", filePath: "songs/3.mp3", coverPath: "covers/cover2.jpg",songDurationText: "3:00"},
+    {songName: "Confide", filePath: "songs/4.mp3", coverPath: "covers/cover1.jpg",songDurationText: "3:35"},
+    {songName: "NCS SONG", filePath: "songs/1.mp3", coverPath: "covers/cover1.jpg",songDurationText: "2:50"}
 ]
 
 
@@ -54,11 +55,13 @@ myProgressBar.addEventListener('change', () => {
 })
 
 
-// IMP
+// IMP - Update Data of Each Song Item Element using forEach Function
+// like iterating over array and updating information
 songItem.forEach((element, i) => {
     // console.log(element, i)
    element.getElementsByTagName("img")[0].src = songs[i].coverPath;
    element.getElementsByClassName("songName")[0].innerText = songs[i].songName;
+   element.getElementsByClassName("songDurationText")[0].innerText = songs[i].songDurationText;
   
 })
 
@@ -75,8 +78,8 @@ function makeAllPlay(){
 Array.from(document.getElementsByClassName("playSongList")).forEach((element) => {
     element.addEventListener('click', (e) => {
         // console.log(e.target)
-        makeAllPlay()
-        songIndex = parseInt(e.target.id)
+        makeAllPlay();
+        songIndex = parseInt(e.target.id)  // Update ID of Element in SongIndex Variable
         e.target.classList.remove("fa-play-circle")
         e.target.classList.add("fa-pause-circle")
         audioElement.src = `songs/${songIndex+1}.mp3`
