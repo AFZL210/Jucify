@@ -2,12 +2,8 @@
 # Jucify
 
 This Repo contains source code of Jucify - Simple Music Streaming web app
+- [Try Jucify](https://github.com/AFZL210)
 
-## Screenshots
-
-![App Screenshot](https://pasteboard.co/V0U4iP5kaHbd.jpg)
-
-  
 ## Tech Stack
 
 **Client:** HTML, CSS, JavaScript
