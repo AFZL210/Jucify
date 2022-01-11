@@ -2,7 +2,7 @@
 # Jucify
 
 This Repo contains source code of Jucify - Simple Music Streaming web app
-- [Try Jucify](https://afzl210.github.io/Jucify/)
+- [Try Jucify - https://afzl210.github.io/Jucify/](https://afzl210.github.io/Jucify/)
 
 ## Tech Stack
 
